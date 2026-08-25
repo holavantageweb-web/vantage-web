@@ -1,0 +1,10 @@
+{
+  "name": "vantage-api",
+  "private": true,
+  "type": "module",
+  "description": "Solo dependencias para la función serverless /api/analyze (VANTAGE CHECK). El sitio en sí sigue siendo HTML/CSS/JS estático, sin build.",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "zod": "^3.25.0"
+  }
+}
