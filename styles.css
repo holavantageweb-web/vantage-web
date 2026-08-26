@@ -921,6 +921,9 @@ section { padding-block: var(--section-pad); }
   align-items: flex-start;
   gap: .9rem;
 }
+.cookie-banner[hidden] {
+  display: none;
+}
 .cookie-banner p {
   color: var(--ink-mute);
   font-size: .84rem;
