@@ -910,7 +910,7 @@ section { padding-block: var(--section-pad); }
   --accent: #619181;
   position: fixed;
   left: 1.2rem;
-  bottom: 1.2rem;
+  bottom: max(1.2rem, calc(env(safe-area-inset-bottom, 0px) + .7rem));
   z-index: 200;
   max-width: 300px;
   background: var(--bg-raise);
@@ -932,8 +932,17 @@ section { padding-block: var(--section-pad); }
 }
 .cookie-banner p a { color: var(--ink); text-decoration: underline; }
 .cookie-banner-btn { margin: 0; padding: .7rem 1.4rem; font-size: .82rem; }
+/* Mientras el aviso está visible, se oculta el flotante de WhatsApp para
+   que nunca puedan solaparse, sea cual sea el tamaño de pantalla. */
+body.has-cookie-banner .whatsapp-float { display: none; }
 @media (max-width: 539px) {
-  .cookie-banner { left: 1rem; bottom: 1rem; max-width: calc(100% - 88px); padding: 1rem; }
+  .cookie-banner {
+    left: 1rem;
+    right: 1rem;
+    bottom: max(1rem, calc(env(safe-area-inset-bottom, 0px) + .6rem));
+    max-width: none;
+    padding: 1rem;
+  }
   .cookie-banner p { font-size: .78rem; }
 }
 
