@@ -1,4 +1,41 @@
 /* =============================================================
+   0. Fuentes (alojadas localmente — sin peticiones a Google Fonts,
+      así no se transfiere ningún dato del visitante a terceros)
+   ============================================================= */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("assets/fonts/manrope-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("assets/fonts/montserrat-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("assets/fonts/montserrat-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* =============================================================
    1. Tokens
    ============================================================= */
 :root {
@@ -844,6 +881,58 @@ section { padding-block: var(--section-pad); }
   transition: color .3s var(--ease-out), border-color .3s var(--ease-out);
 }
 .contact-links a:hover { color: var(--ink); border-color: var(--ink); }
+
+/* --- Legal pages (privacidad / cookies) --- */
+.legal { padding-top: calc(76px + var(--section-pad)); }
+.legal-inner { max-width: 42rem; display: flex; flex-direction: column; gap: 1.1rem; }
+.legal-inner h1 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  text-transform: uppercase;
+  margin-top: .6rem;
+}
+.legal-updated { color: var(--ink-mute); font-size: .85rem; }
+.legal-inner h2 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  margin-top: 1.4rem;
+}
+.legal-inner p { color: var(--ink-mute); font-size: 1rem; line-height: 1.7; }
+.legal-inner p a { color: var(--ink); text-decoration: underline; }
+.legal-back { margin-top: 1.5rem; }
+.legal-back a { color: var(--ink); }
+
+/* --- Cookie banner --- */
+.cookie-banner {
+  --accent: #619181;
+  position: fixed;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 200;
+  max-width: 300px;
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .9rem;
+}
+.cookie-banner p {
+  color: var(--ink-mute);
+  font-size: .84rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.cookie-banner p a { color: var(--ink); text-decoration: underline; }
+.cookie-banner-btn { margin: 0; padding: .7rem 1.4rem; font-size: .82rem; }
+@media (max-width: 539px) {
+  .cookie-banner { left: 1rem; bottom: 1rem; max-width: calc(100% - 88px); padding: 1rem; }
+  .cookie-banner p { font-size: .78rem; }
+}
 
 /* =============================================================
    8. Footer

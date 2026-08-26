@@ -57,6 +57,25 @@
     });
   }
 
+  function initCookieBanner() {
+    const banner = document.querySelector("[data-cookie-banner]");
+    if (!banner) return;
+    const STORAGE_KEY = "vantage-cookie-notice-seen";
+
+    let alreadySeen = false;
+    try { alreadySeen = !!localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+    if (!alreadySeen) banner.hidden = false;
+
+    const btn = banner.querySelector("[data-cookie-accept]");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        try { localStorage.setItem(STORAGE_KEY, "1"); } catch (e) {}
+        banner.hidden = true;
+      });
+    }
+  }
+
   function initReveals() {
     const els = document.querySelectorAll("[data-reveal]");
     if (!els.length) return;
@@ -83,6 +102,7 @@
     safe(initNav, "initNav");
     safe(initMobileMenu, "initMobileMenu");
     safe(initContactForm, "initContactForm");
+    safe(initCookieBanner, "initCookieBanner");
     safe(initReveals, "initReveals");
   }
 
