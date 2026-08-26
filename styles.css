@@ -765,14 +765,16 @@ section { padding-block: var(--section-pad); }
 }
 
 .about-visual {
-  display: none;
+  display: flex;
   justify-self: center;
   flex-direction: column;
   align-items: center;
   gap: 1.3rem;
+  width: 100%;
+  max-width: 9rem;
 }
 @media (min-width: 860px) {
-  .about-visual { display: flex; width: 100%; max-width: 13rem; }
+  .about-visual { max-width: 13rem; }
 }
 .about-mark {
   width: 100%;
