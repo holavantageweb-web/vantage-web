@@ -532,47 +532,6 @@ section { padding-block: var(--section-pad); }
   max-width: 62ch;
 }
 
-/* --- Precio --- */
-.pricing { border-top: 1px solid var(--line); text-align: center; }
-.pricing-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 34rem;
-  margin-inline: auto;
-}
-.pricing-headline {
-  font-family: var(--head);
-  font-weight: 700;
-  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
-  text-transform: uppercase;
-  margin-top: .6rem;
-}
-.pricing-amount {
-  margin-top: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .6rem;
-}
-.pricing-number {
-  font-family: var(--head);
-  font-weight: 700;
-  font-size: clamp(3rem, 7vw, 4.6rem);
-  color: #619181;
-  line-height: 1;
-}
-.pricing-note { color: var(--ink-mute); font-size: .92rem; max-width: 32ch; }
-.pricing-includes {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-}
-.pricing-includes li { color: var(--ink); font-size: .96rem; }
-.pricing .btn { margin-top: 2.2rem; background: #619181; }
-.pricing .btn:hover { background-color: #70A091; }
-
 /* --- VANTAGE CHECK --- */
 /* Color de acento propio de esta sección — no toca --accent global (sage,
    usado en el resto del sitio). Todo lo que dentro de .vantage-ai use
