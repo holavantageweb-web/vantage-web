@@ -696,6 +696,15 @@ section { padding-block: var(--section-pad); }
   .ai-metric-text { font-size: .82rem; }
 }
 
+/* --- NFC --- */
+.nfc {
+  --accent: #31E1E1;
+  border-top: 1px solid var(--line);
+}
+.nfc .offer-list { max-width: 34rem; }
+.nfc-cta { text-align: center; margin-top: clamp(2.5rem, 5vw, 4rem); }
+.nfc-cta p { color: var(--ink-mute); margin-bottom: 1rem; }
+
 /* --- About --- */
 /* Mismo acento oficial que VANTAGE CHECK, solo en lo que ya usaba color de
    acento aquí (el kicker "SOBRE NOSOTROS") — el resto del texto no cambia. */
