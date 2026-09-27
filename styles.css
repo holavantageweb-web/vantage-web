@@ -257,7 +257,7 @@ ol, ul { list-style: none; padding: 0; }
   display: block;
   line-height: 0;
 }
-.hero-wordmark svg {
+.hero-wordmark img {
   display: block;
   width: clamp(220px, 34vw, 360px);
   height: auto;
