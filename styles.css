@@ -166,13 +166,8 @@ ol, ul { list-style: none; padding: 0; }
   display: flex; align-items: center; justify-content: space-between;
   height: 76px;
 }
-.nav-brand {
-  font-family: var(--head);
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
+.nav-brand { display: flex; align-items: center; }
+.nav-brand img { height: 18px; width: auto; display: block; }
 .nav-links {
   display: none;
   gap: 2.2rem;
@@ -951,13 +946,7 @@ body.has-cookie-banner .whatsapp-float { display: none; }
 .footer-inner {
   display: flex; flex-direction: column; gap: .6rem;
 }
-.footer-name {
-  font-family: var(--head);
-  font-weight: 700;
-  font-size: .95rem;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
+.footer-name { height: 22px; width: auto; display: block; align-self: flex-start; }
 .footer-tagline { color: var(--ink-mute); font-size: .88rem; }
 .footer-links {
   display: flex; gap: 1.4rem; margin-top: 1rem; flex-wrap: wrap;
