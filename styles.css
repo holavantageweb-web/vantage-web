@@ -716,7 +716,9 @@ section { padding-block: var(--section-pad); }
   width: 100%;
   max-width: 18rem;
   height: auto;
-  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, .5));
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, .45);
 }
 @media (min-width: 860px) {
   .nfc-card-img { max-width: 100%; }
