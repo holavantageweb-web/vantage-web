@@ -701,8 +701,27 @@ section { padding-block: var(--section-pad); }
   --accent: #31E1E1;
   border-top: 1px solid var(--line);
 }
+.nfc-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 860px) {
+  .nfc-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 22rem); gap: 4rem; }
+}
 .nfc .offer-list { max-width: 34rem; }
-.nfc-cta { text-align: center; margin-top: clamp(2.5rem, 5vw, 4rem); }
+.nfc-visual { display: flex; justify-content: center; }
+.nfc-card-img {
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, .5));
+}
+@media (min-width: 860px) {
+  .nfc-card-img { max-width: 100%; }
+}
+.nfc-cta { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .nfc-cta p { color: var(--ink-mute); margin-bottom: 1rem; }
 
 /* --- About --- */
