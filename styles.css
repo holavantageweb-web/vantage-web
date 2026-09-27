@@ -254,11 +254,13 @@ ol, ul { list-style: none; padding: 0; }
   height: auto;
 }
 .hero-wordmark {
-  font-family: var(--head);
-  font-weight: 700;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  display: block;
+  line-height: 0;
+}
+.hero-wordmark svg {
+  display: block;
+  width: clamp(220px, 34vw, 360px);
+  height: auto;
 }
 .hero-rule {
   display: block;
