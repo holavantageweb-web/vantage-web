@@ -705,23 +705,29 @@ section { padding-block: var(--section-pad); }
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
 }
 @media (min-width: 860px) {
-  .nfc-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 22rem); gap: 4rem; }
+  .nfc-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 32rem); gap: 4rem; align-items: stretch; }
 }
 .nfc .offer-list { max-width: 34rem; }
 .nfc-visual { display: flex; justify-content: center; }
 .nfc-card-img {
   width: 100%;
-  max-width: 18rem;
+  max-width: 22rem;
   height: auto;
   border-radius: 12px;
   border: 1px solid var(--line);
   box-shadow: 0 25px 45px rgba(0, 0, 0, .45);
 }
 @media (min-width: 860px) {
-  .nfc-card-img { max-width: 100%; }
+  .nfc-card-img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+  }
 }
 .nfc-cta { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .nfc-cta p { color: var(--ink-mute); margin-bottom: 1rem; }
