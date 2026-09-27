@@ -43,7 +43,7 @@
   --bg-raise:    #101010;
   --ink:         #F4F4F1;
   --ink-mute:    #9B9B95;
-  --accent:      #96AA86;
+  --accent:      #31E1E1;
   --line:        rgba(244, 244, 241, .14);
   --line-strong: rgba(244, 244, 241, .28);
 
@@ -117,7 +117,7 @@ ol, ul { list-style: none; padding: 0; }
   font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: #619181;
+  color: #31E1E1;
 }
 
 .link-arrow {
@@ -264,7 +264,7 @@ ol, ul { list-style: none; padding: 0; }
   display: block;
   width: 72px;
   height: 1px;
-  background: #619181;
+  background: #31E1E1;
 }
 .hero-kicker-sub {
   font-family: var(--head);
@@ -272,7 +272,7 @@ ol, ul { list-style: none; padding: 0; }
   font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: #619181;
+  color: #31E1E1;
 }
 .hero-tagline {
   font-size: clamp(1.2rem, 2.4vw, 1.6rem);
@@ -289,7 +289,7 @@ ol, ul { list-style: none; padding: 0; }
   gap: 1.6rem;
 }
 .hero-cta { color: var(--ink); }
-.hero-proof { color: #619181; }
+.hero-proof { color: #31E1E1; }
 .hero-trust {
   margin-top: 1.6rem;
   display: flex;
@@ -314,7 +314,7 @@ ol, ul { list-style: none; padding: 0; }
   transform: translateY(-50%);
   width: 5px;
   height: 5px;
-  background: #619181;
+  background: #31E1E1;
   border-radius: 50%;
 }
 
@@ -387,7 +387,7 @@ section { padding-block: var(--section-pad); }
   flex: 0 0 auto;
   width: 22px;
   height: 22px;
-  color: #619181;
+  color: #31E1E1;
 }
 
 /* --- Portfolio --- */
@@ -426,7 +426,7 @@ section { padding-block: var(--section-pad); }
 }
 .project-type {
   font-size: .88rem;
-  color: #619181;
+  color: #31E1E1;
 }
 .project-desc {
   color: var(--ink-mute);
@@ -456,7 +456,7 @@ section { padding-block: var(--section-pad); }
   font-weight: 300;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: transparent;
-  -webkit-text-stroke: 1px #619181;
+  -webkit-text-stroke: 1px #31E1E1;
   margin-bottom: .7rem;
 }
 .process-list h3 {
@@ -515,7 +515,7 @@ section { padding-block: var(--section-pad); }
   font-weight: 300;
   font-size: clamp(2rem, 3.4vw, 2.8rem);
   color: transparent;
-  -webkit-text-stroke: 1px #619181;
+  -webkit-text-stroke: 1px #31E1E1;
 }
 .why-body h3 {
   font-family: var(--head);
@@ -533,14 +533,13 @@ section { padding-block: var(--section-pad); }
 }
 
 /* --- VANTAGE CHECK --- */
-/* Color de acento propio de esta sección — no toca --accent global (sage,
-   usado en el resto del sitio). Todo lo que dentro de .vantage-ai use
-   var(--accent) hereda automáticamente este verde por cascada de CSS. */
+/* Mismo acento oficial (cian de marca) que el resto del sitio. Todo lo que
+   dentro de .vantage-ai use var(--accent) lo hereda por cascada de CSS. */
 .vantage-ai {
-  --accent: #619181;
+  --accent: #31E1E1;
   border-top: 1px solid var(--line);
 }
-.vantage-ai .btn:hover { background-color: #70A091; }
+.vantage-ai .btn:hover { background-color: #40F0F1; }
 
 .ai-form {
   display: flex;
@@ -701,7 +700,7 @@ section { padding-block: var(--section-pad); }
 /* Mismo acento oficial que VANTAGE CHECK, solo en lo que ya usaba color de
    acento aquí (el kicker "SOBRE NOSOTROS") — el resto del texto no cambia. */
 .about {
-  --accent: #619181;
+  --accent: #31E1E1;
   border-top: 1px solid var(--line);
 }
 .about-inner {
@@ -746,7 +745,7 @@ section { padding-block: var(--section-pad); }
   display: block;
   width: 0;
   height: 1px;
-  background: #619181;
+  background: #31E1E1;
   transition: width 1s var(--ease-soft) .5s;
 }
 .about-visual.is-revealed .about-mark { opacity: 1; transform: scale(1); }
@@ -770,11 +769,11 @@ section { padding-block: var(--section-pad); }
 /* --- Contact --- */
 /* Mismo acento oficial que VANTAGE CHECK, solo para el botón final. */
 .contact {
-  --accent: #619181;
+  --accent: #31E1E1;
   border-top: 1px solid var(--line);
   text-align: center;
 }
-.contact .btn:hover { background-color: #70A091; }
+.contact .btn:hover { background-color: #40F0F1; }
 .contact-inner {
   display: flex; flex-direction: column; align-items: center;
   gap: 1.1rem;
@@ -816,7 +815,7 @@ section { padding-block: var(--section-pad); }
   transition: border-color .3s var(--ease-out);
 }
 .contact-field input:focus,
-.contact-field textarea:focus { outline: none; border-color: #619181; }
+.contact-field textarea:focus { outline: none; border-color: #31E1E1; }
 .contact-form .btn { align-self: center; }
 .btn {
   margin-top: .8rem;
@@ -829,7 +828,7 @@ section { padding-block: var(--section-pad); }
   padding: .95rem 1.9rem;
   transition: transform .4s var(--ease-out), background-color .4s var(--ease-out);
 }
-.btn:hover { transform: translateY(-2px); background-color: #A5B996; }
+.btn:hover { transform: translateY(-2px); background-color: #40F0F1; }
 .contact-links {
   margin-top: 1.4rem;
   display: flex; gap: 1.6rem; flex-wrap: wrap; justify-content: center;
@@ -868,7 +867,7 @@ section { padding-block: var(--section-pad); }
 
 /* --- Cookie banner --- */
 .cookie-banner {
-  --accent: #619181;
+  --accent: #31E1E1;
   position: fixed;
   left: 1.2rem;
   bottom: max(1.2rem, calc(env(safe-area-inset-bottom, 0px) + .7rem));
