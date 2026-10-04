@@ -39,13 +39,6 @@
     menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
   }
 
-  const INTEREST_LABELS = {
-    "web": "Una página web",
-    "nfc": "Tarjetas NFC",
-    "web-nfc": "Web + tarjetas NFC",
-    "aun-no": "Aún no lo sé"
-  };
-
   function initContactForm() {
     const form = document.querySelector("[data-contact-form]");
     if (!form) return;
@@ -53,28 +46,14 @@
       e.preventDefault();
       const name = form.querySelector("#contact-name").value.trim();
       const email = form.querySelector("#contact-email").value.trim();
-      const interestEl = form.querySelector("#contact-interest");
-      const interest = interestEl ? INTEREST_LABELS[interestEl.value] || "" : "";
       const message = form.querySelector("#contact-message").value.trim();
-      const subject = "Consulta VANTAGE" + (interest ? " (" + interest + ")" : "") + " — " + name;
-      const body = "Nombre: " + name + "\nEmail: " + email +
-        (interest ? "\nMe interesa: " + interest : "") + "\n\n" + message;
+      const subject = "Consulta VANTAGE — " + name;
+      const body = "Nombre: " + name + "\nEmail: " + email + "\n\n" + message;
       const mailto =
         "mailto:hola.vantageweb@gmail.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
       window.location.href = mailto;
-    });
-  }
-
-  function initInterestLinks() {
-    const select = document.querySelector("#contact-interest");
-    if (!select) return;
-    document.querySelectorAll("[data-interest]").forEach(link => {
-      link.addEventListener("click", () => {
-        const value = link.getAttribute("data-interest");
-        if (INTEREST_LABELS[value]) select.value = value;
-      });
     });
   }
 
@@ -87,8 +66,10 @@
     try { alreadySeen = !!localStorage.getItem(STORAGE_KEY); } catch (e) {}
 
     if (!alreadySeen) {
-      banner.hidden = false;
-      document.body.classList.add("has-cookie-banner");
+      setTimeout(() => {
+        banner.hidden = false;
+        document.body.classList.add("has-cookie-banner");
+      }, 6000);
     }
 
     const btn = banner.querySelector("[data-cookie-accept]");
@@ -127,7 +108,6 @@
     safe(initNav, "initNav");
     safe(initMobileMenu, "initMobileMenu");
     safe(initContactForm, "initContactForm");
-    safe(initInterestLinks, "initInterestLinks");
     safe(initCookieBanner, "initCookieBanner");
     safe(initReveals, "initReveals");
   }
