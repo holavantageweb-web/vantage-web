@@ -881,41 +881,6 @@ section { padding-block: var(--section-pad); }
   padding: .5rem .95rem; border: 1px solid var(--line);
 }
 
-/* --- Personalización + solución completa --- */
-.custom { border-top: 1px solid var(--line); }
-.custom-inner { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; }
-@media (min-width: 960px) { .custom-inner { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 4.5rem; } }
-.custom-headline {
-  font-family: var(--head); font-weight: 700; text-transform: uppercase;
-  font-size: clamp(2rem, 4.8vw, 3.4rem); line-height: 1.06; margin-top: .7rem;
-}
-.custom-headline span { color: #31E1E1; }
-.custom-lead { font-size: clamp(1.1rem, 1.9vw, 1.3rem); line-height: 1.5; margin-top: 1.4rem; max-width: 38ch; }
-.check-list { display: grid; grid-template-columns: 1fr; gap: 1rem 2rem; margin-top: 2rem; }
-@media (min-width: 640px) { .check-list { grid-template-columns: repeat(2, 1fr); } }
-.check-list li { display: flex; align-items: flex-start; gap: .8rem; font-size: .95rem; line-height: 1.45; }
-.check-list svg { flex: 0 0 auto; width: 20px; height: 20px; color: #31E1E1; margin-top: .1rem; }
-.custom-note { color: var(--ink-mute); font-size: .82rem; margin-top: 1.4rem; }
-.complete {
-  padding: clamp(1.6rem, 3vw, 2.4rem);
-  border: 1px solid rgba(49, 225, 225, .35);
-  background: var(--bg-raise);
-}
-.complete h3 {
-  font-family: var(--head); font-weight: 700; text-transform: uppercase;
-  font-size: clamp(1.25rem, 2.4vw, 1.6rem); margin-top: .6rem;
-}
-.equation { margin-top: 1.4rem; display: flex; flex-direction: column; }
-.equation li {
-  font-family: var(--head); font-weight: 600; font-size: .85rem; letter-spacing: .06em;
-  text-transform: uppercase; padding: .75rem 0; border-top: 1px solid var(--line);
-  position: relative; padding-left: 1.6rem;
-}
-.equation li:last-child { border-bottom: 1px solid var(--line); }
-.equation li::before { content: "+"; position: absolute; left: 0; color: #31E1E1; font-weight: 400; }
-.equation li:first-child::before { content: ""; }
-.complete p:not(.kicker) { color: var(--ink-mute); font-size: .98rem; line-height: 1.65; margin-top: 1.4rem; }
-
 /* --- Web + NFC --- */
 .webnfc { border-top: 1px solid var(--line); }
 .webnfc .flow { margin-bottom: 2.4rem; }
