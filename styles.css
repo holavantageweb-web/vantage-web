@@ -924,7 +924,7 @@ body.has-cookie-banner .whatsapp-float { display: none; }
 .work-head .link-arrow { color: var(--ink); font-size: .8rem; }
 .work-steps { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
 @media (min-width: 720px) { .work-steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
-.work-steps li { display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; align-items: baseline; }
+.work-steps li { display: grid; grid-template-columns: 2.6rem 1fr; column-gap: .8rem; align-items: baseline; }
 .work-num {
   grid-row: span 2;
   font-family: var(--head); font-weight: 300; font-size: 1.6rem;
