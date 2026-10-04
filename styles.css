@@ -616,7 +616,44 @@ section { padding-block: var(--section-pad); }
 }
 .solution-card p:not(.kicker) { color: var(--ink-mute); font-size: 1rem; line-height: 1.6; max-width: 40ch; }
 .solution-card .link-arrow { margin-top: auto; padding-top: .8rem; color: var(--ink); }
-/* --- Cómo trabajamos (3 pasos) --- */
+/* --- Cómo trabajamos (proceso web) --- */
+.process-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+}
+@media (min-width: 720px) { .process-list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1280px) {
+  .process-list { grid-template-columns: repeat(5, 1fr); gap: 0; }
+  .process-list li { border-left: 1px solid var(--line); padding: 0 1.4rem; }
+  .process-list li:first-child { border-left: 0; padding-left: 0; }
+}
+.process-num {
+  display: block;
+  font-family: var(--head);
+  font-weight: 300;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: transparent;
+  -webkit-text-stroke: 1px #31E1E1;
+  margin-bottom: .7rem;
+}
+.process-list h3 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.process-list p { color: var(--ink-mute); font-size: .9rem; }
+.process-links {
+  margin-top: 1rem;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.process-links .link-arrow { color: var(--ink); font-size: .8rem; }
+
+/* --- Cómo funciona (pasos NFC) --- */
+.how { border-top: 1px solid var(--line); }
+.step-visual { width: 64px; height: 64px; color: #31E1E1; margin-bottom: 1.1rem; }
 .steps { display: grid; grid-template-columns: 1fr; gap: 2.4rem; }
 @media (min-width: 860px) {
   .steps { grid-template-columns: repeat(3, 1fr); gap: 0; }
@@ -925,17 +962,17 @@ body.has-cookie-banner .whatsapp-float { display: none; }
 .reasons p { color: var(--ink-mute); font-size: .95rem; line-height: 1.6; max-width: 30ch; }
 
 /* --- Contacto: WhatsApp como alternativa clara --- */
-.wa-btn {
-  display: inline-flex; align-items: center; gap: .7rem;
-  padding: .85rem 1.5rem;
+.contact-links { align-items: center; gap: 1.2rem 2rem; }
+.contact-links .wa-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .75rem;
+  padding: .95rem 1.8rem;
   border: 1px solid rgba(49, 225, 225, .45);
-  color: var(--ink) !important; border-bottom-color: rgba(49, 225, 225, .45) !important;
-  font-family: var(--head); font-weight: 600; font-size: .85rem; letter-spacing: .02em;
-  transition: border-color .3s var(--ease-out), background-color .3s var(--ease-out) !important;
+  color: var(--ink);
+  font-family: var(--head); font-weight: 600; font-size: .88rem; letter-spacing: .02em; line-height: 1;
+  transition: border-color .3s var(--ease-out), background-color .3s var(--ease-out);
 }
-.wa-btn svg { width: 20px; height: 20px; color: #25D366; flex: 0 0 auto; }
-.wa-btn:hover { background-color: rgba(49, 225, 225, .08); border-color: #31E1E1 !important; }
-.contact-links { align-items: center; }
+.contact-links .wa-btn svg { width: 20px; height: 20px; flex: 0 0 auto; color: #25D366; }
+.contact-links .wa-btn:hover { background-color: rgba(49, 225, 225, .08); border-color: #31E1E1; }
 
 @media (max-width: 539px) {
   .hero-kicker-sub { font-size: .7rem; letter-spacing: .12em; }
