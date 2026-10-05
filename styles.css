@@ -336,22 +336,15 @@ section { padding-block: var(--section-pad); }
 
 /* --- Portfolio --- */
 .portfolio { border-top: 1px solid var(--line); }
-.project-featured {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-@media (min-width: 960px) {
-  .project-featured { flex-direction: row; align-items: flex-start; gap: 3.5rem; }
-  .project-preview { flex: 0 0 66%; }
-  .project-info { flex: 1 1 auto; padding-top: .4rem; }
-}
+.projects { display: grid; grid-template-columns: 1fr; gap: 2.6rem; }
+@media (min-width: 860px) { .projects { grid-template-columns: repeat(2, 1fr); gap: 2.4rem; } }
+.project-card { display: flex; flex-direction: column; gap: 1.4rem; }
 .project-preview {
   display: block;
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   box-shadow: 0 25px 45px rgba(0, 0, 0, .4);
 }
 .project-preview img {
@@ -360,8 +353,10 @@ section { padding-block: var(--section-pad); }
   transform: translateY(0);
   transition: transform 2.2s var(--ease-soft);
 }
+.project-preview--static img { height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-soft); }
 @media (hover: hover) and (pointer: fine) {
   .project-preview:hover img { transition-duration: 4.6s; transform: translateY(-62%); }
+  .project-preview--static:hover img { transition-duration: 1.2s; transform: scale(1.04); }
 }
 .project-info { display: flex; flex-direction: column; gap: .5rem; }
 .project-name {
