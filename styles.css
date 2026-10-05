@@ -353,10 +353,8 @@ section { padding-block: var(--section-pad); }
   transform: translateY(0);
   transition: transform 2.2s var(--ease-soft);
 }
-.project-preview--static img { height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-soft); }
 @media (hover: hover) and (pointer: fine) {
-  .project-preview:hover img { transition-duration: 4.6s; transform: translateY(-62%); }
-  .project-preview--static:hover img { transition-duration: 1.2s; transform: scale(1.04); }
+  .project-preview:hover img { transition-duration: var(--dur, 4.6s); transform: translateY(var(--end, -62%)); }
 }
 .project-info { display: flex; flex-direction: column; gap: .5rem; }
 .project-name {
